@@ -1,6 +1,8 @@
 import createMDX from "@next/mdx"
 import type { NextConfig } from "next"
 
+const isProd = process.env.NODE_ENV === "production"
+
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
@@ -11,7 +13,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // GitHub Pages không hỗ trợ Image Optimization mặc định của Next.js
   },
-  basePath: "/lai-dai/english-study",
+  basePath: isProd ? "/lai-dai/english-study" : "",
+  assetPrefix: isProd ? "/lai-dai/english-study" : "",
 }
 
 const withMDX = createMDX({

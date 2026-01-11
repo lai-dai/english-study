@@ -33,6 +33,9 @@ jobs:
         with:
           path: ./out # Thư mục Next.js xuất ra sau khi build
 
+      - name: Disable Jekyll
+        run: touch ./out/.nojekyll
+
   deploy:
     environment:
       name: github-pages
