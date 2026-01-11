@@ -2,6 +2,7 @@ import createMDX from "@next/mdx"
 import type { NextConfig } from "next"
 
 const isProd = process.env.NODE_ENV === "production"
+const repoName = "english-study"
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -12,9 +13,11 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true, // GitHub Pages không hỗ trợ Image Optimization mặc định của Next.js
+    loader: "custom",
+    loaderFile: "./lib/image-loader.js",
   },
-  basePath: isProd ? "/english-study" : "",
-  assetPrefix: isProd ? "/english-study" : "",
+  basePath: isProd ? `/${repoName}` : "",
+  assetPrefix: isProd ? `/${repoName}/` : "",
 }
 
 const withMDX = createMDX({
