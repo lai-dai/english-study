@@ -13,11 +13,13 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true, // GitHub Pages không hỗ trợ Image Optimization mặc định của Next.js
-    loader: "custom",
-    loaderFile: "./lib/image-loader.js",
   },
   basePath: isProd ? `/${repoName}` : "",
   assetPrefix: isProd ? `/${repoName}/` : "",
+
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : "",
+  },
 }
 
 const withMDX = createMDX({
