@@ -1,12 +1,13 @@
 {
-  "name": "my-mdx",
+  "name": "english-study",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "server": "npx serve@latest out"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
