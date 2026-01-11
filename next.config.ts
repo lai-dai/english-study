@@ -13,8 +13,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // GitHub Pages không hỗ trợ Image Optimization mặc định của Next.js
   },
-  basePath: isProd ? "/lai-dai/english-study" : "",
-  assetPrefix: isProd ? "/lai-dai/english-study" : "",
+  basePath: isProd ? "/english-study" : "",
+  assetPrefix: isProd ? "/english-study" : "",
 }
 
 const withMDX = createMDX({
