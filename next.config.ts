@@ -1,8 +1,8 @@
 import createMDX from "@next/mdx"
 import type { NextConfig } from "next"
 
-const isProd = process.env.NODE_ENV === "production"
-const repoName = "english-study"
+// const isProd = process.env.NODE_ENV === "production"
+// const repoName = "english-study"
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -14,12 +14,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // GitHub Pages không hỗ trợ Image Optimization mặc định của Next.js
   },
-  basePath: isProd ? `/${repoName}` : "",
-  assetPrefix: isProd ? `/${repoName}/` : "",
+  // basePath: isProd ? `/${repoName}` : "",
+  // assetPrefix: isProd ? `/${repoName}/` : "",
 
-  env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : "",
-  },
+  // env: {
+  //   NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : "",
+  // },
   enablePrerenderSourceMaps: false,
   productionBrowserSourceMaps: false,
 }
