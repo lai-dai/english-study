@@ -20,6 +20,8 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : "",
   },
+  enablePrerenderSourceMaps: false,
+  productionBrowserSourceMaps: false,
 }
 
 const withMDX = createMDX({
